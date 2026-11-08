@@ -1,0 +1,1 @@
+// ─── Placeholder — challenge validator ───────────────────────────────────────

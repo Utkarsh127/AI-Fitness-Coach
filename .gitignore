@@ -1,0 +1,92 @@
+# ============================================================
+# AI Fitness Coach — Root Git Ignore
+# ============================================================
+
+# ─── Dependencies ───────────────────────────────────────────
+node_modules/
+**/node_modules/
+
+# ─── Production Builds & Bundles ────────────────────────────
+dist/
+build/
+.next/
+out/
+
+# ─── Test Coverage & Reports ────────────────────────────────
+coverage/
+.nyc_output/
+
+# ─── Logs & Runtime Diagnostics ─────────────────────────────
+logs/
+**/logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ─── Environment Variables (Keep secrets local, preserve examples) ─
+.env
+.env.*
+.env.local
+.env.*.local
+!.env.example
+!**/.env.example
+
+# ─── Server Uploads ─────────────────────────────────────────
+uploads/
+**/uploads/
+
+# ─── Operating System & Editor Files ────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+
+# ─── Unsafe Test Scripts (Containing Hardcoded Credentials) ──
+server/test-browser-e2e.js
+server/e2e-community.js
+server/e2e-messaging.js
+server/test_post.js
+server/test_post_empty.js
+server/test_post_image.js
+server/test_real_image.js
+server/test-upload.js
+server/test-upload-proper.js
+server/test-upload-community.js
+server/test-upload-community2.js
+
+# ─── Temporary Debug Scratchpads & One-Off Maintenance Scripts ──
+server/cleanup-legacy-posts.js
+server/analyze-legacy-posts.js
+server/check-post-images.js
+server/reproduce-500.js
+server/test.js
+server/test-api.js
+server/test-cloudinary-quota.js
+server/test-cloudinary-raw.js
+server/test-upload-cloudinary.js
+server/test-upload-cloudinary2.js
+client/test-axios.js
+
+# ─── Local Test Screenshots & Temporary Test Artifacts ───────
+# (Specific target files only — preserves legitimate app images/assets)
+server/fail-presence.png
+server/fail-search.png
+server/test-error-B.png
+server/real.jpg
+server/test-image.jpg
+server/test-image.png
+server/dummy.png
+server/dummy.jpg
+server/msg-img.png
+server/e2e-img.png
+server/test-raw.png
+server/test-community.png
+server/test-community2.png
+server/test-upload-direct.png
+server/test-upload-direct2.png
+server/test.png
+

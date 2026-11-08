@@ -1,0 +1,1 @@
+// ─── Placeholder — community/post service ────────────────────────────────────

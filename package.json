@@ -1,0 +1,29 @@
+{
+  "name": "ai-fitness-coach",
+  "version": "1.0.0",
+  "description": "AI Fitness Coach & Community Platform — MERN Stack",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm run dev --workspace=server",
+    "dev:client": "npm run dev --workspace=client",
+    "build": "npm run build --workspace=client",
+    "install:all": "npm install --legacy-peer-deps && npm install --workspace=server --legacy-peer-deps && npm install --workspace=client --legacy-peer-deps",
+    "lint": "npm run lint --workspaces",
+    "test": "npm run test --workspaces"
+  },
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "author": "",
+  "license": "MIT"
+}

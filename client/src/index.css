@@ -1,0 +1,135 @@
+/* =============================================================
+   Global base styles — imported once in main.jsx
+   ============================================================= */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Custom base layer ──────────────────────────────────────── */
+@layer base {
+  :root {
+    --scrollbar-thumb: #334155;
+    --scrollbar-track: #1e293b;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-white font-sans antialiased;
+    min-height: 100dvh;
+  }
+
+  /* Custom scrollbar (WebKit) */
+  ::-webkit-scrollbar       { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+  ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 9999px; }
+
+  /* Focus ring */
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-500 ring-offset-2 ring-offset-surface;
+  }
+
+  /* Typography defaults */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold;
+  }
+
+  a {
+    @apply transition-colors duration-150;
+  }
+}
+
+/* ─── Reusable component classes ─────────────────────────────── */
+@layer components {
+
+  /* Glassmorphism card */
+  .glass-card {
+    @apply bg-surface-card/80 backdrop-blur-md border border-surface-border rounded-2xl shadow-card;
+  }
+
+  /* Primary button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-brand-500 hover:bg-brand-600
+           text-white font-semibold text-sm
+           px-5 py-2.5 rounded-xl
+           transition-all duration-200
+           shadow-glow hover:shadow-glow
+           active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Secondary/outline button */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-transparent border border-surface-border
+           hover:border-brand-500 hover:text-brand-400
+           text-slate-300 font-medium text-sm
+           px-5 py-2.5 rounded-xl
+           transition-all duration-200
+           active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Ghost button */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2
+           text-slate-400 hover:text-white hover:bg-surface-card
+           font-medium text-sm px-3 py-2 rounded-lg
+           transition-all duration-150 active:scale-95;
+  }
+
+  /* Form input */
+  .input {
+    @apply w-full bg-surface-card border border-surface-border
+           rounded-xl px-4 py-3 text-sm text-white
+           placeholder:text-slate-500
+           focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500
+           transition-colors duration-150;
+  }
+
+  /* Form label */
+  .label {
+    @apply block text-sm font-medium text-slate-300 mb-1.5;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  .badge-green  { @apply badge bg-brand-500/20 text-brand-400; }
+  .badge-pink   { @apply badge bg-accent-500/20 text-accent-400; }
+  .badge-slate  { @apply badge bg-slate-700/50 text-slate-300; }
+
+  /* Divider */
+  .divider {
+    @apply border-t border-surface-border my-4;
+  }
+
+  /* Skeleton loader */
+  .skeleton {
+    @apply bg-surface-border rounded-lg animate-shimmer;
+    background-image: linear-gradient(
+      90deg,
+      theme('colors.surface.card') 0%,
+      theme('colors.surface.border') 50%,
+      theme('colors.surface.card') 100%
+    );
+    background-size: 200% 100%;
+  }
+
+  /* Page container */
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Section heading */
+  .section-heading {
+    @apply text-2xl sm:text-3xl font-display font-bold text-white;
+  }
+}

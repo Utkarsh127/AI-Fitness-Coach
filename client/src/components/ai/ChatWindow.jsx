@@ -1,0 +1,1 @@
+// ─── Placeholder — ChatWindow (AI Coach) ─────────────────────────────────────

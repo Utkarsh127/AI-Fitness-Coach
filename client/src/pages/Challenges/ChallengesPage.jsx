@@ -1,0 +1,1 @@
+// ─── Placeholder — Challenges list page ──────────────────────────────────────
