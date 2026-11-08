@@ -6,6 +6,14 @@ AI Fitness Coach is a full-stack fitness platform designed to help users manage 
 
 Built with the MERN stack, the platform combines artificial intelligence, real-time communication, and personalized fitness management in one application.
 
+## 🏗️ System Architecture
+
+The application uses a full-stack client-server architecture with REST APIs and real-time communication through a shared HTTP server.
+
+For the detailed architecture diagram and communication flow, see:
+
+[View System Architecture](docs/architecture.md)
+
 ## 🚀 Features
 
 ### 🤖 AI Fitness Coach
