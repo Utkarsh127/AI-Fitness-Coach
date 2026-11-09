@@ -9,7 +9,7 @@ import { HiArrowLeft, HiChat } from 'react-icons/hi';
 import { useDispatch } from 'react-redux';
 import { createConversation } from '../../store/slices/messagingSlice.js';
 import * as communityApi from '../../api/community.api.js';
-import PostCard from '../../components/Community/PostCard.jsx';
+import PostCard from '../../components/community/PostCard.jsx';
 import { Spinner } from '../../components/common/Loader.jsx';
 import useAuth from '../../hooks/useAuth.js';
 
